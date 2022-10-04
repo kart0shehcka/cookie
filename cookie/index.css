@@ -1,0 +1,127 @@
+ body {
+	box-sizing: border-box;
+} 
+ button {
+	padding: 0;
+	border: none;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+div.span {
+	background-color: red;
+	height: 100vh;
+}
+
+div.span:nth-child(even) {
+	background-color: blueviolet;
+} 
+
+.cookie__notification-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cookie__notification {
+	display: none;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: fixed;
+	bottom: 15px;
+	left: 50%;
+	width: 900px;
+	max-width: 90%;
+	transform: translateX(-50%);
+	padding: 25px;
+	background-color: #413E59CC;
+	border-radius: 8px;
+	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.cookie__notification .cookie__title {
+	margin: 0;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 150%;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	color: #fff;
+}
+
+.cookie__notification p {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 150%;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.6);
+
+}
+
+.cookie__notification a {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.cookie__accept {
+	background-image: url(elements.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	-moz-background-size: contain;
+	background-size: contain;
+	width: 285px;
+	height: 62px;
+	margin-bottom: 10px;
+}
+
+.cookie__notification.show {
+	display: block;
+}
+
+@media (min-width: 576px) {
+	.cookie__notification.show {
+		display: block;
+	}
+
+	.cookie__accept {
+		margin: 0 0 0 25px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.cookie__notification {
+		height: 252px;
+		width: 290px;
+		align-items: center;
+		bottom: 0;
+	}
+
+	.cookie__notification.show {
+		display: flex;
+		text-align: left;
+		flex-direction: column;
+		align-items: center
+	}
+
+	.cookie__notification-row {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cookie__notification h5 {
+		padding-bottom: 5px;
+	}
+
+	.cookie__notification p {
+		padding-bottom: 15px;
+	}
+
+	.cookie__accept {
+		margin: 10px 0 0 0;
+	}
+}
